@@ -1,16 +1,19 @@
 <template>
   <div class="app">
     <NavBar />
+   <!-- <Footer id="foot"/>-->
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   data(){
     return{
@@ -41,7 +44,7 @@ html, body {
   color: #2c3e50;
 }
 h1{
-  color: #fff
+  color: #fff;
 }
 
 @keyframes typing{
@@ -49,7 +52,17 @@ h1{
         width: 0;
     }
     to{
-        width: 100%
+        width: 90%
     }
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 </style>

@@ -29,7 +29,7 @@ export default {
     return{
       title: 'Full Stack Developer',
       one: 'Hello, there!',
-      two: 'Welcome to my portfolio. I hope you like it.',
+      two:  `Welcome to my portfolio. I hope you like it.\nI'm Jhony, a technology enthusiast, and a passionate Full Stack developer.\nHere, you'll embark on a journey through my professional path, filled with\nchallenges, learnings, and projects that mirror my dedication to the \nprogramming universe.`,
       img: imgSrc,
       msg: 'Get in touch',
       link: '/contact'
@@ -45,31 +45,32 @@ h1{
 .titleFullStatck{
   text-align: left;
   margin-left: 7em;
-  margin-top: 5em;
+  margin-top: 3em;
   font-size: 1.5em;
 }
 .subtitle{
   text-align: left;
   font-weight: none;
-  margin-left: 10.5em;
-  margin-top: -3em;
-  animation:  typing 5s steps(20) infinite;
+  margin-left: 17.4em;
+  margin-top: -6em;
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
+  font-size: 0.6em;
 
 }
 .flex{
   display: flex;
 }
 .img{
-  margin-top: -15em;
+  margin-top: -12em;
   margin-left: 60em;
   width: 27%;
   position: fixed;
  
 }
 .button-custom{
+  margin-top: 2em;
   margin-left: -32em;
   position: fixed
 
