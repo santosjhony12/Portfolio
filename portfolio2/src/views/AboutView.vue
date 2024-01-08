@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about">
     <Title :title="title" id="title"/>
     <div class="flex">
       <SubTitle :two="two" id="subTitle" />
@@ -119,5 +119,8 @@ export default {
 }
 .customImages{
   display: flex;
+}
+.about{
+  padding: 0 0 10em 0;
 }
 </style>

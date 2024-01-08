@@ -13,6 +13,7 @@ footer{
     color: #fff;
     font-family: 'IstokWeb-Regular';
     font-size: 0.8em;
-    margin: 10em 0 5em 0;
+    padding: 1.3em 0 1.3em 0;
+    background-color: #000;
 }
 </style>

@@ -63,16 +63,16 @@ h1{
   display: flex;
 }
 .img{
-  margin-top: -12em;
-  margin-left: 60em;
   width: 27%;
-  position: fixed;
- 
+  margin: -10em 0 0 11em;
 }
 .button-custom{
-  margin-top: 2em;
+  margin-top: -5em;
   margin-left: -32em;
   position: fixed
 
+}
+.home{
+  padding: 0 0 10em 0;
 }
 </style>
