@@ -1,6 +1,27 @@
 <template>
   <div class="app">
     <NavBar id="nav"/>
+
+    <div class="home">
+      <Title :title="title" class="titleFullStatck"/>
+      <div class="flex">
+        <SubTitle :one="one" :two="two" class="subtitle"/>
+        <Image :img="img" class="img"/>
+      </div>
+      <Button :msg="msg" :link="link" class="button-custom" />
+    </div>
+
+    <div id="about">
+      
+    </div>
+
+    <div id="projects">
+      
+    </div>
+
+    <div id="contact">
+      
+    </div>
     <Footer id="foot"/>
   </div>
 </template>
@@ -8,16 +29,29 @@
 <script>
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+import Title from './components/Title.vue';
+import SubTitle from './components/SubTitle.vue';
+import Button from './components/Button.vue';
+import Image from './components/Image.vue';
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    Footer
+    Footer,
+    Title,
+    SubTitle,
+    Button,
+    Image
   },
   data(){
     return{
-
+      title: 'Full Stack Developer',
+      one: 'Hello, there!',
+      two:  `Welcome to my portfolio. I hope you like it.\nI'm Jhony, a technology enthusiast, and a passionate Full Stack developer.\nHere, you'll embark on a journey through my professional path, filled with\nchallenges, learnings, and projects that mirror my dedication to the \nprogramming universe.`,
+      img: imgSrc,
+      msg: 'Get in touch',
+      link: '/contact'
     }
   }
 }
