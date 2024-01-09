@@ -14,7 +14,7 @@
 import Title from '@/components/Title.vue';
 import SubTitle from '@/components/SubTitle.vue';
 import Image from '@/components/Image.vue'
-import imgSrc from '@/assets/gamer.jpeg';
+import imgSrc from '@/assets/lua.gif';
 import Button from '@/components/Button.vue';
 
 export default {
@@ -67,12 +67,12 @@ h1{
   margin: -10em 0 0 11em;
 }
 .button-custom{
-  margin-top: -5em;
+  margin-top: 0em;
   margin-left: -32em;
   position: fixed
 
 }
 .home{
-  padding: 0 0 10em 0;
+  padding: 0 0 15em 0;
 }
 </style>

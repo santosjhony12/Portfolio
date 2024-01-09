@@ -5,11 +5,9 @@
     <SubTitle :two="two" id="subTitle"/>
 
     <div class="flex-custom">
-      <ProjectCard v-for="(cont, index) in contador" 
-      :key="index" 
-      :link-img="src[cont]" 
-      :repository="linkRepository[cont]"/>
+    <Card v-for="(cont, index) in contador" :key="index" :description="descriptions[cont]" :link="linkRepository[cont]" :title="titulos[cont]" />
     </div>
+
   </div>
 </template>
 
@@ -17,27 +15,30 @@
 import TitleVue from '@/components/Title.vue';
 import ProjectCard from '@/components/ProjectCard.vue';
 import SubTitle from '@/components/SubTitle.vue';
-
+import Card from '@/components/Card.vue';
 export default {
   name: 'ProjectsView',
   components:{
     TitleVue,
     ProjectCard,
-    SubTitle
+    SubTitle,
+    Card
   },
   data(){
     return{
       title: 'Projects',
-      src: [
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=ParkingAPIRESTfull&theme=tokyonight',  
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=Netflix&theme=tokyonight', 'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=veganday&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=To-do-list&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=Sistema_Avaliacao360_1Semestre_BD&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=APICEP&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=SistemaDeControleDeRoupas&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=BankSpringJava&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=TGSync&theme=tokyonight',
-      'https://github-readme-stats.vercel.app/api/pin/?username=santosjhony12&repo=E-commerce&theme=tokyonight',
+      titulos: ['ParkingAPIRESTfull', 'Netflix', 'VeganDay', 'To-do-list', 'Insigh 360º', 'APICEP', 'Sistema de Controle de Roupas',
+    'BankSpring', 'TGSync', 'E-commerce'],
+      descriptions: ['Repository responsible for storing my studies on Spring boot and its technologies.',
+      'Projeto da plataforma de filmes e séries famosa no mundo todo. Desenvolvimento apenas com html e css, com intuito de aprimorar meus conhecimentos nas tecnologias.',
+      'Pagina Web de um restaurante vegano utilizando apenas HTML, CSS e JavaScript.',
+      'Aplicação de tarefas a fazer, muito util para me organizar nos meus afazeres do dia a dia.',
+      'Projeto API do primeiro semestre na Fatec São José dos Campos, no curso de Banco de Dados.',
+      'Demonstração de uma API com o cep.',
+      "Projeto real desenvolvido no momento em que era aprendiz, com auxilio administrativo e análise da Raiane Sousa. O sistema desenvolvido em PHP tem por objetivo aplicação dos 5's num departamento de uma multinacional automotiva, fazendo o controle necessário de entrada e saída de roupa.",
+      'O projeto BankSpring é um aplicativo de sistema bancário desenvolvido em Java utilizando o framework Spring Boot. O objetivo principal do aplicativo é proporcionar aos usuários uma experiência bancária moderna e conveniente, onde eles podem realizar diversas transações bancárias.',
+      'Projeto API do segundo semestre na Fatec São José dos Campos, curso de Banco de Dados.',
+      'E-commerce de produtos de diversas categorias'
     ],
       linkRepository: [
       'https://github.com/santosjhony12/ParkingAPIRESTfull',

@@ -12,16 +12,14 @@ export default {
         
         }
     },
-    props: ['img']
+    props: ['img', 'radius']
 }
 </script>
 
 <style scoped>
 
 img{
-    max-width:100%;
-    border-radius: 20em;
-    
+    max-width:100%;   
 }
 img:hover{
     transform: scale(1.1);
