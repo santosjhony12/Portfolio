@@ -1,4 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { createScrollRevealDirective } from 'vue-scroll-reveal';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+// Adicione a diretiva globalmente
+const vScrollReveal = createScrollRevealDirective({
+  delay: 100,
+  duration: 1000,
+  scale: 0.5,
+  once: false
+});
+
+app.directive('scroll-reveal', vScrollReveal);
+
+app.mount('#app');

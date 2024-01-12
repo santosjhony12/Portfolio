@@ -1,45 +1,45 @@
 <template>
   <div class="app">
     <NavBar id="nav" />
-    <div class="flex" id="home">
+    <div class="flex" id="home" v-scroll-reveal>
       <Title :title="title" class="title"/>
       <SubTitle :two="two" class="subtitle" />
       <img :src="avatar" alt="" class="image">
-    </div>
-    <div class="div-buttons">
+      <div class="div-buttons">
       <a href="" id="cv-button" class="button">Download CV</a>
       <a href="" id="contact-button" class="button">Get in touch</a>
-    
     </div>
+    </div>
+    
 
     <div id="about">
-      <div class="box">
+      <div class="box"  v-scroll-reveal>
         <h1 id="tileAbout">{{ title_about }}</h1>
         <p class="about-text" >{{ about_text }}</p>
       </div>
 
-      <h1>Hard Skills</h1>
-      <h2>Tecnologies I've been working with recently</h2>
-      <div class="technologies">
-        <i v-for="(technologie, index) in technologiesList" :key="index" :class="technologie" id="technologiesIcons"></i>
+      <div v-scroll-reveal>
+        <h1>Hard Skills</h1>
+        <h2>Tecnologies I've been working with recently</h2>
+        <div class="technologies" >
+          <i  v-scroll-reveal v-for="(technologie, index) in technologiesList" :key="index" :class="technologie" id="technologiesIcons"></i>
+        </div>
       </div>
-
     </div>
 
-    <div id="projects">
+    <div id="projects" v-scroll-reveal>
       <h1>My main projects</h1>
       <div class="cards">
-        <CardVue class="card" v-for="(contadorInd, index) in contador" 
+        <CardVue v-scroll-reveal class="card" v-for="(contadorInd, index) in contador" 
         :key="index" 
         :title="titulos[contadorInd]" 
         :link="linkRepository[contadorInd]"/>
       </div>
-      
+    </div>    
 
+    <div id="contact">
+        <h1>Contact</h1>
     </div>
-
-  
-    
   </div>
 </template>
 
@@ -50,6 +50,7 @@ import SubTitle from './components/SubTitle.vue';
 import Avatar from '@/assets/svg.svg'
 import Image from './components/Image.vue';
 import CardVue from './components/Card.vue';
+
 export default {
   name: 'App',
   components: {
@@ -158,11 +159,11 @@ h1{
   text-align: left;
 }
 .flex{
-  margin: 7em 10em 0 10em
+  margin: 4em 10em 0 10em
 }
 .image{
   width: 30%;
-  margin: -15em 0em 0 40em;
+  margin: -12em 0em 0 40em;
 
 }
 #cv-button{
@@ -185,7 +186,8 @@ h1{
 }
 .div-buttons{
   text-align: left;
-  margin: -3em 0 0 9em;
+  margin: -3em 10em 0 9em;
+  margin-left: -1em
 }
 #contact-button:hover{
   color: #8257e6;
@@ -233,7 +235,7 @@ h2{
 .card{
   margin: 1em
 }
-#about{
+#about, #projects{
   margin-bottom: 15em;
 }
 .card:hover{

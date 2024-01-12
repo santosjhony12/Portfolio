@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "scrollreveal": "^4.0.9",
+    "vue": "^3.2.13",
+    "vue-scroll-reveal": "^2.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
