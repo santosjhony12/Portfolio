@@ -37,9 +37,15 @@
       </div>
     </div>    
 
-    <div id="contact">
+    <div id="contact" v-scroll-reveal>
         <h1>Contact</h1>
+
+        <div class="cards" >
+          <Contact v-for="(icon, index) in icons_contact" :msg="msg_icons_contact[index]" :icon="icon" :key="index" :link="links_contact[index]"/>
+        </div>
     </div>
+
+    <Footer />
   </div>
 </template>
 
@@ -50,6 +56,8 @@ import SubTitle from './components/SubTitle.vue';
 import Avatar from '@/assets/svg.svg'
 import Image from './components/Image.vue';
 import CardVue from './components/Card.vue';
+import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -57,12 +65,14 @@ export default {
     NavBar,
     Title,
     SubTitle,
-    Avatar,
     Image,
-    CardVue
+    CardVue,
+    Contact,
+    Footer
   },
   data(){
     return{
+      
       title:"Jhony Souza",
       two:  `Welcome to my portfolio👋.\nI hope you like it.`,
       avatar: Avatar,
@@ -103,7 +113,10 @@ export default {
       'https://github.com/santosjhony12/TGSync',
       'https://github.com/santosjhony12/E-commerce'
     ],
-    contador: [0,1,2,3,4,5,6,7,8,9]
+    contador: [0,1,2,3,4,5,6,7,8,9],
+    icons_contact: ['fa fa-linkedin', 'fa fa-whatsapp', 'fa fa-github', '	fa fa-send'],
+    msg_icons_contact: ['@jhonysantosdesouza', '(12) 99607-6401', '@santosjhony12', 'jhonysouzadev@gmail.com'],
+    links_contact: ['https://www.linkedin.com/in/jhony-santos-de-souza-920229238/', 'https://wa.me/qr/KXCMHLGMXEESL1','https://github.com/santosjhony12', 'mailto:jhonysouzadev@gmail.com']
     }
   }
 }
@@ -235,7 +248,7 @@ h2{
 .card{
   margin: 1em
 }
-#about, #projects{
+#about, #projects, #contact{
   margin-bottom: 15em;
 }
 .card:hover{

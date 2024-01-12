@@ -3,26 +3,19 @@
         <img src="https://avatars.githubusercontent.com/u/127989416?s=280&v=4" alt="">
             <h2>{{ title }}</h2>
             <p>{{ description }}</p>
-            <a :href="link" target="_blank"><i class="devicon-github-original icons"></i> GitHub</a>
-            
+            <a :href="link" target="_blank"><i class="devicon-github-original icons"></i> GitHub</a>  
     </div>
 </template>
 
 <script>
-import Img from '@/assets/imgNeon.jpg'
-import Button from './Button.vue';
 export default{
     name: 'Card',
     data(){
         return{
             text: 'GitHub Project',
-            img: Img
         }
     },
-    props: ['description', 'title', 'link'],
-    components: {
-        Button
-    }
+    props: ['description', 'title', 'link']
 }
 </script>
 
