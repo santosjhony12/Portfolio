@@ -6,21 +6,20 @@
       <SubTitle :two="two" class="subtitle" />
       <img :src="avatar" alt="" class="image">
       <div class="div-buttons">
-      <a href="" id="cv-button" class="button">Download CV</a>
-      <a href="" id="contact-button" class="button">Get in touch</a>
+        <a href="" id="cv-button" class="button">Download CV</a>
+        <a href="" id="contact-button" class="button">Get in touch</a>
     </div>
     </div>
     
-
     <div id="about">
       <div class="box"  v-scroll-reveal>
         <h1 id="tileAbout">{{ title_about }}</h1>
         <p class="about-text" >{{ about_text }}</p>
       </div>
 
-      <div v-scroll-reveal>
-        <h1>Hard Skills</h1>
-        <h2>Tecnologies I've been working with recently</h2>
+      <div v-scroll-reveal  class="div-technologies">
+        <h1 v-scroll-reveal>Hard Skills</h1>
+        <h2 v-scroll-reveal>Tecnologies I've been working with recently</h2>
         <div class="technologies" >
           <i  v-scroll-reveal v-for="(technologie, index) in technologiesList" :key="index" :class="technologie" id="technologiesIcons"></i>
         </div>
@@ -199,7 +198,7 @@ h1{
 }
 .div-buttons{
   text-align: left;
-  margin: -3em 10em 0 9em;
+  margin: -7em 10em 0 9em;
   margin-left: -1em
 }
 #contact-button:hover{
@@ -264,7 +263,46 @@ h2{
   transform: scale(1.2);
   transition: 1s;
   cursor: pointer;
-  color: white
+  color: white;
 }
-
+@media only screen and (max-width: 768px) {
+  
+  .flex {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  .image {
+    width: 70%; /* Adjust the width as needed */
+    margin: 0;
+  }
+  .div-buttons {
+    margin: 1em 0; /* Adjust the margin as needed */
+  }
+  .box {
+    width: 90%; /* Adjust the width as needed */
+    margin: 0
+  }
+  .technologies,
+  .cards {
+    padding: 2em 1em 0 1em;
+  }
+  #app{
+    margin: 0 1em 0 1em;
+    overflow: hidden;
+  }
+  #home{
+    margin: 3em 0 10em 0;
+  }
+  #about, #contact, #projects, .div-technologies{
+    margin-bottom: 10em ;
+  }
+}
 </style>

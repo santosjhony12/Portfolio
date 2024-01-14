@@ -3,10 +3,10 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
+      <a  class="icons" href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href=""><i class="devicon-github-original icons"></i></a>
-      <a href=""><i class="devicon-linkedin-plain icons"></i></a>
+      <a class="icons"><i class="devicon-github-original icons"></i></a>
+      <a class="icons" href=""><i class="devicon-linkedin-plain icons"></i></a>
 
     </nav>
   </div>
@@ -52,5 +52,17 @@ i{
   color: white;
   transform: scale(1.2);
   transition: 0.7s;
+}
+@media only screen and (max-width: 768px) {
+  .icons{
+    display: none !important;
+  }
+  nav{
+    border-bottom: #8257e6 solid 1.5px;
+    text-align: center;
+  }
+  nav a{
+    margin-right: 20px;
+  }
 }
 </style>
