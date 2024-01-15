@@ -23,8 +23,7 @@
   }
   
   .one {
-    color: #b31aff;
-    text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.834);
+    color: #8257e6;
   }
   
   .two {

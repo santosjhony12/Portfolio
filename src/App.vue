@@ -3,11 +3,12 @@
     <NavBar id="nav" />
     <div class="flex" id="home" v-scroll-reveal>
       <Title :title="title" class="title"/>
-      <SubTitle :two="two" class="subtitle" />
+      <SubTitle :one="one" :two="two" class="subtitle" />
       <img :src="avatar" alt="" class="image">
       <div class="div-buttons">
-        <a href="" id="cv-button" class="button">Download CV</a>
-        <a href="" id="contact-button" class="button">Get in touch</a>
+        <a id="cv-button" class="button" href="./assets/Jhony_FullStack_english.pdf" download="Jhony_FullStack_english.pdf">Download CV</a>
+
+        <a href="https://wa.me/qr/KXCMHLGMXEESL1" id="contact-button" class="button" target="_blank">Get in touch</a>
     </div>
     </div>
     
@@ -73,6 +74,7 @@ export default {
     return{
       
       title:"Jhony Souza",
+      one: 'FullStack Developer',
       two:  `Welcome to my portfolio👋.\nI hope you like it.`,
       avatar: Avatar,
       title_about: 'About',
@@ -122,6 +124,9 @@ export default {
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: 'IstokWeb-Regular';
   src: url('../src/assets/Istok_Web/IstokWeb-Regular.ttf');
@@ -140,6 +145,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: hidden;
 }
 h1{
   color: #fff;
@@ -303,6 +309,11 @@ h2{
   }
   #about, #contact, #projects, .div-technologies{
     margin-bottom: 10em ;
+  }
+  .box{
+    border: none;
+    margin-bottom: 10em;
+    width: 85%
   }
 }
 </style>

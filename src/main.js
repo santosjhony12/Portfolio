@@ -9,7 +9,7 @@ const vScrollReveal = createScrollRevealDirective({
   delay: 100,
   duration: 1000,
   scale: 0.5,
-  once: false
+  reset: true
 });
 
 app.directive('scroll-reveal', vScrollReveal);
