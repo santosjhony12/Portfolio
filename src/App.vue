@@ -6,7 +6,7 @@
       <SubTitle :one="one" :two="two" class="subtitle" />
       <img :src="avatar" alt="" class="image">
       <div class="div-buttons">
-        <a id="cv-button" class="button" href="./assets/Jhony_FullStack_english.pdf" download="Jhony_FullStack_english.pdf">Resume</a>
+        <a id="cv-button" class="button" href="https://drive.google.com/file/d/1SPtrBpnUmgVyELsYO51XychKz_Nu1cfE/view?usp=sharing">Resume</a>
 
         <a href="https://wa.me/qr/KXCMHLGMXEESL1" id="contact-button" class="button" target="_blank">Get in touch</a>
     </div>
