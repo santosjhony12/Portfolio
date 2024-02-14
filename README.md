@@ -1,6 +1,6 @@
 # Welcome to My Portfolio
 
-Please, click in this link to access my portfolio. <a href="jhonysouza.netlify.app" target="_blank">Clique aqui</a>
+Please, click in this link to access my portfolio. <a href="https://jhonysouza.netlify.app" target="_blank">Clique aqui</a>
 
 ## Project setup
 ```
